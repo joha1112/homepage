@@ -9,7 +9,6 @@
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
 <script>
 $("#bar").keyup(function(event){
     if(event.keyCode == 13){
@@ -19,12 +18,23 @@ $("#bar").keyup(function(event){
     }
 });
 $(document).ready(function(){
+
+$.getJSON('https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid=29282261%20and%20u=%27c%27&format=json'
+,function(data) {
+
+$("#temp").append("The current tempature is "+data.query.results.channel.item.condition.temp+"c")
+
+});
+
 document.getElementById('bar').value="";
 });
 
 
 </script>
 </head>
+<script>
+
+</script>
 
 <body>
 <!--Thanks to kevinarefunny on github for this design-->
@@ -115,7 +125,7 @@ if (nameValue == "wsg") {
         window.location = "https://www.google.dk/search?newwindow=1&q="+nameValue;}'>
 </div>
 
-<div id="weather"></div>
+<p id="temp"></p>
 </span>
 
 </div>

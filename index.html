@@ -14,7 +14,7 @@ $("#bar").keyup(function(event){
     if(event.keyCode == 13){
         $("#soeg").click();
     }else{
-        console.log("Test");
+//        console.log("Test");
     }
 });
 
@@ -22,7 +22,7 @@ $("#bar").keyup(function(event){
 $.getJSON('https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid=29282261%20and%20u=%27c%27&format=json'
 ,function(data) {
 
-$("#temp").append("The current tempature is "+data.query.results.channel.item.condition.temp+"c")
+//$("#temp").append("The current tempature is "+data.query.results.channel.item.condition.temp+"c")
 
 });
 $(document).ready(function(){

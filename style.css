@@ -64,3 +64,10 @@ margin-left: -217px;
     color: #a9a9a9;
     padding:0px 0px 0px 10px;
 }
+
+#temp {
+    font-size: 20pt;
+    position: fixed;
+    top: 150px;
+    margin: -10px 0 0 0;
+}

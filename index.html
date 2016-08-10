@@ -15,7 +15,7 @@
 
             $.getJSON('https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid=29282261%20and%20u=%27c%27&format=json'
             ,function(data) {
-                //$("#temp").append("The current tempature is "+data.query.results.channel.item.condition.temp+"c")
+                $("#temp").append("The current tempature is "+data.query.results.channel.item.condition.temp+"&#8451;")
             });
             $(document).ready(function(){
                 document.getElementById('bar').value="";
@@ -26,8 +26,8 @@
 <!--Thanks to kevinarefunny on github for this design-->
 <div id=body>
   <h1 align="center" id="message" class="expandUp"></h1>
-      <script type="text/javascript">
-      
+  <script type="text/javascript">
+  /*    
               var d = new Date();
               var n = d.getHours();
 
@@ -35,15 +35,15 @@
                       message = "Godnat";
               } else if ( n >= 1 && n <= 4 ) {
                       message = "Godnat";
-              } else if ( n >= 5 && n <= 11 ) {
+              } else if ( n >= 6 && n <= 9 ) {
                       message = "God morgen";
-              } else if ( n >= 12 && n <= 16 ) {
+              } else if ( n >= 13 && n <= 17 ) {
                       message = "God eftermiddag";
-              } else if ( n >= 17 && n <= 21 ) {
+              } else if ( n >= 18 && n <= 21 ) {
                       message = "God aften";
               }
               document.getElementById("message").innerHTML = message;
-      </script>
+*/      </script>
 
 <span>MEDIA </span>
     <span class=links>

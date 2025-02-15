@@ -4,49 +4,15 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script>
-            $("#bar").keyup(function(event){
-                if(event.keyCode == 13){
-                    $("#soeg").click();
-                }else{
-//                  console.log("Test");
-                }
-            });
 
-            $.getJSON('https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid=29282261%20and%20u=%27c%27&format=json'
-            ,function(data) {
-                $("#temp").append("The current tempature is "+data.query.results.channel.item.condition.temp+"&#8451;")
-            });
-            $(document).ready(function(){
-                document.getElementById('bar').value="";
-            });
-        </script>
 </head>
 <body>
 <!--Thanks to kevinarefunny on github for this design-->
 <div id=body>
   <h1 align="center" id="message" class="expandUp"></h1>
-  <script type="text/javascript">
-  /*    
-              var d = new Date();
-              var n = d.getHours();
-
-              if ( n == 22 || n == 23 || n == 0) {
-                      message = "Godnat";
-              } else if ( n >= 1 && n <= 4 ) {
-                      message = "Godnat";
-              } else if ( n >= 6 && n <= 9 ) {
-                      message = "God morgen";
-              } else if ( n >= 13 && n <= 17 ) {
-                      message = "God eftermiddag";
-              } else if ( n >= 18 && n <= 21 ) {
-                      message = "God aften";
-              }
-              document.getElementById("message").innerHTML = message;
-*/      </script>
 
 <span>MEDIA </span>
-    <span class=links>
+    <span class='links'>
         [ <a href="https://www.4chan.org/g/" target="_blank">Technology</a> /
         <a href="https://www.reddit.com" target="_blank">Reddit</a> /
         <a href="https://www.reddit.com/r/linux" target="_blank">Linux</a> ]
@@ -55,7 +21,7 @@
 <br><br>
 
 <span>4CHAN </span>
-    <span class=links>
+    <span class='links'>
         [ <a href="https://www.4chan.org/cgl/" target="_blank">Cosplay</a> /
         <a href="https://www.4chan.org/wsg/" target="_blank">WorkSaveGif</a> /
         <a href="https://www.4chan.org/p/" target="_blank">Photo</a> ]
@@ -64,7 +30,7 @@
     <br><br>
 
 <span>ENTERTAINMENT </span>
-    <span class=links>
+    <span class='links'>
         [ <a href="https://www.netflix.com/browse" target="_blank">Netflix</a> /
         <a href="https://www.youtube.com/" target="_blank">YouTube</a> ]
     </span>
@@ -72,46 +38,12 @@
 <br><br>
 
 <span>SOCIAL </span>
-    <span class=links>
+    <span class='links'>
         [ <a href='https://twitter.com' target="_blank">Twitter</a> /
         <a href='https://instagram.com' target="_blank">Instagram</a> /
         <a href="https://facebook.com/" target="_blank">Facebook</a> ]
     </span>
 
-<br><br>
-
-    <span>
-        <div id="search">
-            <input id="bar" type="text" autofocus onkeydown="if (event.keyCode == 13) document.getElementById('soeg').click();">
-                <input type="button" value=" " id="soeg" autocomplete="off" onclick='var nameValue = document.getElementById("bar").value;
-                    if (nameValue == "wsg") {
-                        window.location = "https://boards.4chan.org/wsg/";
-                    }else if (nameValue =="yt"){
-                        window.location = "https://www.youtube.com/";
-                    }else if (nameValue =="fj"){
-                        window.location = "https://funnyjunk.com/autism/";
-                    }else if (nameValue =="tw"){
-                        window.location = "https://twitter.com/";
-                    }else if (nameValue =="inst"){
-                        window.location = "https://Instagram.com";
-                    }else if (nameValue =="nf"){
-                        window.location = "https://netflix.com/";
-                    }else if (nameValue =="c"){
-                        window.location = "https://boards.4chan.org/c/";
-                    }else if (nameValue =="eu"){
-                        window.location = "http://www.folkebevaegelsen.dk/nyheder";
-                    }else if (nameValue =="ab"){
-                        window.location = "http://www.arbejderen.dk/";
-                    }else if (nameValue =="fb"){
-                        window.location = "https://facebook.com/";
-                    }else if (nameValue =="tgm"){
-                        window.location = "https://www.youtube.com/watch?v=_j9Icz5kVfI";
-                    }else if (nameValue =="km"){
-                        window.location = "https://www.youtube.com/watch?v=bywig-_ibHQ";   
-                    }else{
-                        window.location = "https://www.google.dk/search?newwindow=1&q="+nameValue;}'>
-        </div>
-    <p id="temp"></p>
 </span>
 </div>
 </body>
